@@ -301,4 +301,39 @@ summary {
 #value {
   margin: 0 10px 0 10px;
 }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.title__wrapper {
+  text-align: center;
+}
+
+.input__wrapper {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.counter__title {
+  margin-right: auto;
+}
+
+.valid {
+  border: solid 3px green;
+}
+
+.invalid {
+  border: solid 3px red;
+}
 /*# sourceMappingURL=main.css.map */

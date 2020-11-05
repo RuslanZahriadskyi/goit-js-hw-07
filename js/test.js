@@ -1,4 +1,13 @@
-const numbers = [1, 2, 3];
+let span = document.querySelector('span');
+let classes = span.classList;
 
-// Функциональный forEach
-numbers.forEach(num => console.log(num));
+span.addEventListener('click', function () {
+  let result = classes.toggle('c');
+
+  if (result) {
+    span.textContent = `'c' added; classList is now "${classes}".`;
+  }
+  //   else {
+  //     span.textContent = `'c' removed; classList is now "${classes}".`;
+  //   }
+});
