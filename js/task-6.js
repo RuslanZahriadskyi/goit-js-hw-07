@@ -4,18 +4,17 @@
 // Для добавления стилей, используй CSS-классы valid и invalid.
 
 const inputRef = document.querySelector('#validation-input');
+const inputRefLength = Number(inputRef.getAttribute('data-length'));
 
 inputRef.addEventListener('blur', validationCheck);
 
-function validationCheck(event) {
-  const inputRefLength = Number(event.target.getAttribute('data-length'));
+function validationCheck() {
+  inputRef.classList.remove('valid');
+  inputRef.classList.remove('invalid');
 
-  event.target.classList.add('valid');
-  event.target.classList.add('invalid');
+  inputRefLength === inputRef.value.length
+    ? inputRef.classList.add('valid')
+    : inputRef.classList.add('invalid');
 
-  if (event.target.value) {
-    inputRefLength === event.target.value.length
-      ? event.target.classList.toggle('invalid')
-      : event.target.classList.toogle('valid');
-  }
+  inputRef.value = '';
 }
