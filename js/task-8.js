@@ -23,7 +23,7 @@ const inputRef = document.querySelector('#controls > input');
 const parrentBoxRef = document.querySelector('#boxes');
 
 buttonRenderRef.addEventListener('click', buttonRender);
-buttonDestroyRef.addEventListener('click', buttonDestroy);
+// buttonDestroyRef.addEventListener('click', buttonDestroy);
 inputRef.addEventListener('click', clearInput);
 
 function buttonRender() {

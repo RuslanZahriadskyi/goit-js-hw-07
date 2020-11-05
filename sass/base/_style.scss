@@ -62,12 +62,16 @@
   margin-right: auto;
 }
 
-.valid {
-  border: solid 3px green;
+#validation-input {
+  border: 3px solid #bdbdbd;
 }
 
-.invalid {
-  border: solid 3px red;
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }
 
 #controls {
