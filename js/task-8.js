@@ -22,21 +22,21 @@ const buttonDestroyRef = document.querySelector(
 const inputRef = document.querySelector('#controls > input');
 const parrentBoxRef = document.querySelector('#boxes');
 
-buttonRenderRef.addEventListener('click', buttonRender);
-// buttonDestroyRef.addEventListener('click', buttonDestroy);
-inputRef.addEventListener('click', clearInput);
+buttonRenderRef.addEventListener('click', onButtonRender);
+buttonDestroyRef.addEventListener('click', onButtonDestroy);
 
-function buttonRender() {
+function onButtonRender() {
   const numberOfBoxes = inputRef.value ? parseInt(inputRef.value) : 0;
   createBoxes(numberOfBoxes);
 }
 
-function clearInput() {
-  inputRef.value = '';
+function onButtonDestroy() {
+  parrentBoxRef.innerHTML = '';
 }
 
 function createBoxes(amount) {
   let createBox = '';
+  inputRef.value = '';
   for (let i = 0; i < amount; i++) {
     const width = WIDTH_FIRST_BOX + i * STEP_PER_BOX;
     const height = HEIGHT_FIRST_BOX + i * STEP_PER_BOX;
