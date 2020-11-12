@@ -15,11 +15,21 @@ const categoriesRef = document.querySelector('#categories');
 
 console.log(`В списке ${categoriesRef.children.length} категории`);
 
-const itemRef = categoriesRef.querySelectorAll('.item');
-
-itemRef.forEach(element => {
+categoriesRef.childNodes.forEach(element => {
+  if (element.childNodes.length === 0) {
+    return;
+  }
   console.log(
     `Категория: ${element.firstElementChild.textContent}
 Количество элементов: ${element.lastElementChild.children.length}`,
   );
 });
+
+// const itemRef = categoriesRef.querySelectorAll('.item');
+
+// itemRef.forEach(element => {
+//   console.log(
+//     `Категория: ${element.firstElementChild.textContent}
+// Количество элементов: ${element.lastElementChild.children.length}`,
+//   );
+// });
